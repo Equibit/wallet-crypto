@@ -34,10 +34,12 @@
   "homepage": "https://github.com/Equibit/wallet-crypto#readme",
   "dependencies": {
     "bip39": "^2.3.0",
+    "create-hash": "^1.1.2",
     "create-hmac": "^1.1.4",
     "pbkdf2": "^3.0.9"
   },
   "devDependencies": {
+    "babel-eslint": "^7.2.1",
     "browserify": "^14.1.0",
     "mocha": "^3.2.0",
     "semistandard": "^10.0.0",
