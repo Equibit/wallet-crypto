@@ -8,11 +8,11 @@
     "build": "mkdir dist; browserify index.js --standalone WalletCryptoUtils > dist/wallet-crypto-utils.js",
     "preversion": "npm test && npm run build",
     "version": "git checkout -b release && git add -f dist/ && git commit -am \"Update dist for release\"",
-    "postversion": "git push --tags && git checkout - && git branch -D release && git push",
+    "postversion": "git push -f origin release && git checkout - && git branch -D release",
     "release:patch": "npm version patch && npm publish",
     "release:minor": "npm version minor && npm publish",
     "release:major": "npm version major && npm publish",
-    "test": "npm-run-all lint test:unit",
+    "test": "npm run lint && npm run test:unit",
     "test:unit": "mocha test.js"
   },
   "repository": {
