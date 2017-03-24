@@ -11,9 +11,9 @@
     "preversion": "npm test && npm run build",
     "version": "git checkout -b release && git add -f dist/ && git commit -am \"Update dist for release\"",
     "postversion": "git push -f origin release",
-    "release:patch": "npm run build; npm version patch && npm publish --access public",
-    "release:minor": "npm run build; npm version minor && npm publish --access public",
-    "release:major": "npm run build; npm version major && npm publish --access public",
+    "release:patch": "npm version patch && npm publish --access public",
+    "release:minor": "npm version minor && npm publish --access public",
+    "release:major": "npm version major && npm publish --access public",
     "postpublish": "git checkout - && git branch -D release",
     "test": "npm run lint && npm run test:unit",
     "test:unit": "mocha test.js"
