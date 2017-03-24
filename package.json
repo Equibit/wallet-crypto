@@ -6,8 +6,8 @@
   "scripts": {
     "lint": "semistandard --fix",
     "build": "mkdir dist; npm run build-standard; npm run build-min",
-    "build-standard": "mkdir dist; browserify index.js --standalone WalletCryptoUtils > dist/wallet-crypto-utils.js",
-    "build-min": "mkdir dist; browserify index.js --standalone WalletCryptoUtils | uglifyjs > dist/wallet-crypto-utils.min.js",
+    "build-standard": "browserify index.js --standalone WalletCryptoUtils > dist/wallet-crypto-utils.js",
+    "build-min": "browserify index.js --standalone WalletCryptoUtils | uglifyjs > dist/wallet-crypto-utils.min.js",
     "preversion": "npm test && npm run build",
     "version": "git checkout -b release && git add -f dist/ && git commit -am \"Update dist for release\"",
     "postversion": "git push -f origin release",
