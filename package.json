@@ -11,10 +11,11 @@
     "release:patch": "npm version patch && npm publish --access public",
     "release:minor": "npm version minor && npm publish --access public",
     "release:major": "npm version major && npm publish --access public",
-    "prepublish": "npm test && npm run build && npm run commit-dist && git push -f origin release",
+    "preversion": "npm run lint && npm test",
+    "prepublish": "npm run build && npm run commit-dist && git push -f origin release",
     "commit-dist": "git checkout -b release && git add -f dist/ && git commit -am \"Update dist for release\"",
     "postpublish": "git checkout - && git branch -D release",
-    "test": "npm run lint && mocha test.js"
+    "test": "mocha test.js"
   },
   "repository": {
     "type": "git",
