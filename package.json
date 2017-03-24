@@ -1,0 +1,41 @@
+{
+  "name": "wallet-crypto",
+  "version": "0.0.1",
+  "description": "Equibit crypto utils",
+  "main": "index.js",
+  "scripts": {
+    "lint": "semistandard --fix",
+    "build": "mkdir dist; browserify index.js --standalone WalletCryptoUtils > dist/wallet-crypto-utils.js",
+    "preversion": "npm test && npm run build",
+    "version": "git checkout -b release && git add -f dist/ && git commit -am \"Update dist for release\"",
+    "postversion": "git push --tags && git checkout - && git branch -D release && git push",
+    "release:patch": "npm version patch && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:major": "npm version major && npm publish",
+    "test": "npm-run-all lint test:unit",
+    "test:unit": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Equibit/wallet-crypto.git"
+  },
+  "keywords": [
+    "equibit",
+    "bitcoin",
+    "crypto"
+  ],
+  "author": "Equibit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Equibit/wallet-crypto/issues"
+  },
+  "homepage": "https://github.com/Equibit/wallet-crypto#readme",
+  "dependencies": {
+    "bip39": "^2.3.0"
+  },
+  "devDependencies": {
+    "browserify": "^14.1.0",
+    "mocha": "^3.2.0",
+    "semistandard": "^10.0.0"
+  }
+}
