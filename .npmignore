@@ -2,3 +2,5 @@ node_modules
 .travis.yml
 Makefile
 .idea
+npm-debug.log
+.DS_Store
