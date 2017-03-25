@@ -1,6 +1,6 @@
 {
   "name": "@equibit/wallet-crypto",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Equibit crypto utils",
   "main": "index.js",
   "scripts": {
