@@ -5,17 +5,11 @@
   "main": "index.js",
   "scripts": {
     "lint": "semistandard",
-    "build": "mkdir dist; npm run build-standard; npm run build-min",
-    "build-standard": "browserify index.js --standalone WalletCryptoUtils > dist/wallet-crypto.js",
-    "build-min": "browserify index.js --standalone WalletCryptoUtils | uglifyjs > dist/wallet-crypto.min.js",
-    "release:patch": "npm version patch && npm publish --access public",
-    "release:minor": "npm version minor && npm publish --access public",
-    "release:major": "npm version major && npm publish --access public",
+    "build": "make build",
     "preversion": "npm run lint && npm test",
-    "postversion": "git push",
-    "prepublish": "npm run build && npm run commit-dist && git push -f origin release",
-    "commit-dist": "git branch -D release; git checkout -b release && git add -f dist/ && git commit -am \"Update dist for release\"",
-    "postpublish": "git checkout - && git branch -D release && git push --tags",
+    "release:patch": "npm version patch && make publish",
+    "release:minor": "npm version minor && make publish",
+    "release:major": "npm version major && make publish",
     "test": "mocha test.js"
   },
   "repository": {
