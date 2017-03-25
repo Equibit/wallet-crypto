@@ -44,6 +44,9 @@
   "semistandard": {
     "env": [
       "mocha"
+    ],
+    "ignore": [
+      "dist/"
     ]
   }
 }
