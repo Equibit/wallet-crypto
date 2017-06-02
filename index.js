@@ -3,6 +3,7 @@ var bitcoin = require('bitcoinjs-lib');
 var pbkdf2 = require('pbkdf2');
 var createHmac = require('create-hmac');
 var createHash = require('create-hash');
+var crypto = require('crypto-browserify');
 
 module.exports = {
   bip39: bip39,
@@ -10,5 +11,7 @@ module.exports = {
   pbkdf2: pbkdf2.pbkdf2,
   pbkdf2Sync: pbkdf2.pbkdf2Sync,
   createHmac: createHmac,
-  createHash: createHash
+  createHash: createHash,
+  createCipher: crypto.createCipher,
+  createDecipher: crypto.createDecipher
 };
