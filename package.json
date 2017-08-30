@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "semistandard",
+    "lint:fix": "semistandard --fix",
     "build": "make build",
     "preversion": "npm run lint && npm test",
     "release:patch": "npm version patch && make publish",
