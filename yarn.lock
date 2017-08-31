@@ -2625,15 +2625,15 @@ tty-browserify@~0.0.0:
   resolved "https://registry.yarnpkg.com/tty-browserify/-/tty-browserify-0.0.0.tgz#a157ba402da24e9bf957f9aa69d524eed42901a6"
 
 "tx-builder-equibit@https://github.com/Equibit/tx-decoder.git":
-  version "0.1.1"
-  resolved "https://github.com/Equibit/tx-decoder.git#0357ffa31ef9f72d653c6f8eb64e41e6558f5ecd"
+  version "0.2.0"
+  resolved "https://github.com/Equibit/tx-decoder.git#83ac4c45599df4d98da45714dc21967640cc54ed"
   dependencies:
-    tx-builder "0.4.6"
+    tx-builder "^0.5.0"
     typeforce "^1.11.4"
 
-tx-builder@0.4.5:
-  version "0.4.5"
-  resolved "https://registry.yarnpkg.com/tx-builder/-/tx-builder-0.4.5.tgz#1e1d4c6a3ad09153a67c608d619e25df53411744"
+tx-builder@0.4.6:
+  version "0.4.6"
+  resolved "https://registry.yarnpkg.com/tx-builder/-/tx-builder-0.4.6.tgz#f1fbcc29b7d874f8103cb9f5c1dd94f615c83c45"
   dependencies:
     bip39 "^2.3.1"
     bitcoinjs-lib "^3.1.1"
@@ -2642,9 +2642,9 @@ tx-builder@0.4.5:
     typeforce "^1.11.1"
     varuint-bitcoin "^1.0.4"
 
-tx-builder@0.4.6:
-  version "0.4.6"
-  resolved "https://registry.yarnpkg.com/tx-builder/-/tx-builder-0.4.6.tgz#f1fbcc29b7d874f8103cb9f5c1dd94f615c83c45"
+tx-builder@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/tx-builder/-/tx-builder-0.5.0.tgz#c0ee9bbc4c93d1f6e6b4166d3e6bb5fa32d252a0"
   dependencies:
     bip39 "^2.3.1"
     bitcoinjs-lib "^3.1.1"
