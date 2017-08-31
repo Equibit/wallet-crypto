@@ -4,7 +4,7 @@ var pbkdf2 = require('pbkdf2');
 var createHmac = require('create-hmac');
 var createHash = require('create-hash');
 var crypto = require('crypto-browserify');
-var eqbTxBuilder = require('tx-builder-equibit/src/tx-builder-equibit');
+var eqbTxBuilder = require('tx-builder-equibit');
 
 module.exports = {
   bip39: bip39,
