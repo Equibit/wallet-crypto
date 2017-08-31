@@ -1,8 +1,8 @@
 build:
 	rm -rf dist
 	mkdir dist
-	./node_modules/.bin/browserify index.js --standalone WalletCryptoUtils -t ./node_modules/.bin/babelify > dist/wallet-crypto.js
-	./node_modules/.bin/browserify index.js --standalone WalletCryptoUtils -t ./node_modules/.bin/babelify | ./node_modules/.bin/uglifyjs > dist/wallet-crypto.min.js
+	./node_modules/.bin/browserify index.js --standalone WalletCryptoUtils -t [ ./node_modules/babelify/index --presets [ env ] ] -o dist/wallet-crypto.js
+	./node_modules/.bin/browserify index.js --standalone WalletCryptoUtils -t [ ./node_modules/babelify/index --presets [ env ] ] | ./node_modules/.bin/uglifyjs > dist/wallet-crypto.min.js
 publish:
 	make build
 	-git branch -D release

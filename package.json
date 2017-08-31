@@ -38,6 +38,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^7.2.1",
+    "babel-preset-env": "^1.6.0",
     "babelify": "^7.3.0",
     "browserify": "^14.1.0",
     "chai": "^3.5.0",
