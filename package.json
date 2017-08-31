@@ -33,6 +33,7 @@
     "bitcoinjs-lib": "^2.3.0",
     "create-hash": "^1.1.2",
     "create-hmac": "^1.1.4",
+    "crypto-browserify": "^3.11.0",
     "pbkdf2": "^3.0.9",
     "tx-builder-equibit": "https://github.com/Equibit/tx-decoder.git"
   },
