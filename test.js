@@ -23,8 +23,8 @@ describe('tx-builder-equibit', function () {
       version: 1,
       locktime: 104,
       vin: [{
-        hash: 'd7b0237b6b14d4b1a652d450a95c7c47c8b56b5e81d3452a5a579f129c3a5fca',
-        index: 0,
+        txid: 'd7b0237b6b14d4b1a652d450a95c7c47c8b56b5e81d3452a5a579f129c3a5fca',
+        vout: 0,
         script: '',
         sequence: 4294967294
       }],
