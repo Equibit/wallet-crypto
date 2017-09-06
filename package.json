@@ -34,8 +34,7 @@
     "create-hash": "^1.1.2",
     "create-hmac": "^1.1.4",
     "crypto-browserify": "^3.11.0",
-    "pbkdf2": "^3.0.9",
-    "tx-builder-equibit": "https://github.com/Equibit/tx-decoder.git"
+    "pbkdf2": "^3.0.9"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.1",
@@ -44,6 +43,7 @@
     "browserify": "^14.1.0",
     "chai": "^3.5.0",
     "mocha": "^3.2.0",
+    "tx-builder-equibit": "https://github.com/Equibit/tx-decoder.git",
     "semistandard": "^10.0.0",
     "uglify-js": "^2.8.15"
   },
