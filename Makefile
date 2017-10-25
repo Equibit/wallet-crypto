@@ -1,7 +1,7 @@
 build:
 	rm -rf dist
 	mkdir dist
-	./node_modules/.bin/browserify index.js --standalone WalletCryptoUtils -o dist/wallet-crypto.js
+	# ./node_modules/.bin/browserify index.js --standalone WalletCryptoUtils -o dist/wallet-crypto.js
 	./node_modules/.bin/browserify index.js --standalone WalletCryptoUtils | ./node_modules/.bin/uglifyjs > dist/wallet-crypto.min.js
 publish:
 	make build

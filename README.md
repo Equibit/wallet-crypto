@@ -4,8 +4,7 @@
 
 This is a collection of crypto libraries for Equibit Wallet app.
 
-Release branch contains `dist` folders with two bundles built with `browserify`:
-- `dist/wallet-crypto.js`
+Release branch contains `dist` folders with a minified (for now) bundle built with `browserify`:
 - `dist/wallet-crypto.min.js`
 
 Install:
