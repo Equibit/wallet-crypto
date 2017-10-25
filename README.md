@@ -18,7 +18,7 @@ npm install @equibit/wallet-crypto
 Main export contains the following properties:
 
 - `bip39` - `bip39` library,
-- `bitcoin` - `bitcoin-js` library,
+- `bitcoin` - `bitcoinjs-lib` library,
 - `pbkdf2` - `pbkdf2.pbkdf2` method,
 - `pbkdf2Sync` - `pbkdf2.pbkdf2Sync` method,
 - `createHmac` - `create-hmac` library,
@@ -28,7 +28,7 @@ Main export contains the following properties:
 - `eqbTxBuilder` - `tx-builder-equibit` Equibit library,
 - `walletMessage` - `wallet-message` Equibit library
 
-Test:
+## Test and build:
 ```
 npm test
 ```
@@ -37,3 +37,8 @@ Build:
 ```
 npm run build
 ```
+
+## Release Notes:
+
+- 0.7.0 Added `wallet-message` library.
+- 0.6.4 Initial version that includes bip39, bitcoinjs-lib, tx-builder-equibit and some others.
