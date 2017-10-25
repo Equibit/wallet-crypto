@@ -4,14 +4,14 @@
   "description": "Equibit crypto utils",
   "main": "index.js",
   "scripts": {
-    "lint": "semistandard",
-    "lint:fix": "semistandard --fix",
+    "lint": "standard",
+    "lint:fix": "standard --fix",
     "build": "make build",
     "preversion": "npm run lint && npm test",
     "release:patch": "npm version patch && make publish",
     "release:minor": "npm version minor && make publish",
     "release:major": "npm version major && make publish",
-    "test": "mocha test.js"
+    "test": "npm run lint && mocha test.js"
   },
   "repository": {
     "type": "git",
@@ -34,7 +34,8 @@
     "create-hash": "^1.1.2",
     "create-hmac": "^1.1.4",
     "crypto-browserify": "^3.11.0",
-    "pbkdf2": "^3.0.9"
+    "pbkdf2": "^3.0.9",
+    "standard": "^10.0.3"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.1",
@@ -44,11 +45,10 @@
     "chai": "^3.5.0",
     "mocha": "^3.2.0",
     "tx-builder-equibit": "https://github.com/Equibit/tx-decoder.git",
-    "wallet-message": "https://github.com/Equibit/wallet-message.git",
-    "semistandard": "^10.0.0",
-    "uglify-js": "^2.8.15"
+    "uglify-js": "^2.8.15",
+    "wallet-message": "https://github.com/Equibit/wallet-message.git"
   },
-  "semistandard": {
+  "standard": {
     "env": [
       "mocha"
     ],
