@@ -44,6 +44,7 @@
     "chai": "^3.5.0",
     "mocha": "^3.2.0",
     "tx-builder-equibit": "https://github.com/Equibit/tx-decoder.git",
+    "wallet-message": "https://github.com/Equibit/wallet-message.git",
     "semistandard": "^10.0.0",
     "uglify-js": "^2.8.15"
   },

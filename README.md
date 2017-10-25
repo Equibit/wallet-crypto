@@ -13,6 +13,21 @@ Install:
 npm install @equibit/wallet-crypto
 ```
 
+## API
+
+Main export contains the following properties:
+
+- `bip39` - `bip39` library,
+- `bitcoin` - `bitcoin-js` library,
+- `pbkdf2` - `pbkdf2.pbkdf2` method,
+- `pbkdf2Sync` - `pbkdf2.pbkdf2Sync` method,
+- `createHmac` - `create-hmac` library,
+- `createHash` - `create-hash` library,
+- `createCipher` - `createCipher` method of `crypto-browserify`,
+- `createDecipher` - `createDecipher` method of `crypto-browserify`,
+- `eqbTxBuilder` - `tx-builder-equibit` Equibit library,
+- `walletMessage` - `wallet-message` Equibit library
+
 Test:
 ```
 npm test

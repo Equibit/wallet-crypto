@@ -1,22 +1,24 @@
-require('mocha');
-var assert = require('chai').assert;
-var crypto = require('./index');
-var eqbTxBuilder = require('tx-builder-equibit');
-var fixtureNode = require('tx-builder-equibit/test/fixtures/hdnode');
+require('mocha')
+var assert = require('chai').assert
+var crypto = require('./index')
+var eqbTxBuilder = require('tx-builder-equibit')
+var fixtureNode = require('tx-builder-equibit/test/fixtures/hdnode')
 
 describe('bip39', function () {
   it('bip39.generateMnemonic', function () {
-    assert.equal(crypto.bip39.generateMnemonic().split(' ').length, 12, 'should generate 12 words');
-  });
-});
+    assert.equal(crypto.bip39.generateMnemonic().split(' ').length, 12, 'should generate 12 words')
+  })
+})
+
 describe('bitcoinjs-lib', function () {
   it('bitcoinjs-lib.HDNode', function () {
-    var mnemonic = crypto.bip39.generateMnemonic();
-    var seed = crypto.bip39.mnemonicToSeed(mnemonic, '');
-    var pk = crypto.bitcoin.HDNode.fromSeedBuffer(seed, crypto.bitcoin.networks.bitcoin);
-    assert.ok(pk.keyPair.compressed, 'should generate a private key');
-  });
-});
+    var mnemonic = crypto.bip39.generateMnemonic()
+    var seed = crypto.bip39.mnemonicToSeed(mnemonic, '')
+    var pk = crypto.bitcoin.HDNode.fromSeedBuffer(seed, crypto.bitcoin.networks.bitcoin)
+    assert.ok(pk.keyPair.compressed, 'should generate a private key')
+  })
+})
+
 describe('tx-builder-equibit', function () {
   var tx = {
     version: 1,
@@ -46,14 +48,20 @@ describe('tx-builder-equibit', function () {
         issuance_json: ''
       }
     }]
-  };
-  var txid = 'f7d06259b369168013b2f00f2b3eadfd5abfab971555fc920d435395dd1a0056';
-  tx.vin[0].keyPair = fixtureNode.keyPair;
-  var buffer = eqbTxBuilder.builder.buildTx(tx);
+  }
+  var txid = 'f7d06259b369168013b2f00f2b3eadfd5abfab971555fc920d435395dd1a0056'
+  tx.vin[0].keyPair = fixtureNode.keyPair
+  var buffer = eqbTxBuilder.builder.buildTx(tx)
   it('tx-builder-equibit.builder.buildTx', function () {
-    assert.ok(buffer.toString('hex'), 'should build a transaction');
-  });
+    assert.ok(buffer.toString('hex'), 'should build a transaction')
+  })
   it('tx-builder-equibit.getTxId', function () {
-    assert.equal(eqbTxBuilder.getTxId(buffer), txid, 'should get txid');
-  });
-});
+    assert.equal(eqbTxBuilder.getTxId(buffer), txid, 'should get txid')
+  })
+})
+
+describe('wallet-message', function () {
+  it('should contain `messagePow` method', function () {
+    assert.equal(typeof crypto.walletMessage.messagePow, 'function')
+  })
+})
