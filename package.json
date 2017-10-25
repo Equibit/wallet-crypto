@@ -1,6 +1,6 @@
 {
   "name": "@equibit/wallet-crypto",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Equibit crypto utils",
   "main": "index.js",
   "scripts": {
@@ -28,8 +28,7 @@
     "url": "https://github.com/Equibit/wallet-crypto/issues"
   },
   "homepage": "https://github.com/Equibit/wallet-crypto#readme",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "bip39": "^2.3.0",
     "bitcoinjs-lib": "^2.3.0",
