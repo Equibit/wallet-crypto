@@ -30,22 +30,23 @@
   "homepage": "https://github.com/Equibit/wallet-crypto#readme",
   "dependencies": {},
   "devDependencies": {
-    "bip39": "^2.3.0",
-    "bitcoinjs-lib": "^2.3.0",
-    "create-hash": "^1.1.2",
-    "create-hmac": "^1.1.4",
-    "crypto-browserify": "^3.11.0",
-    "pbkdf2": "^3.0.9",
     "babel-eslint": "^7.2.1",
     "babel-preset-env": "^1.6.0",
     "babelify": "^7.3.0",
+    "bip39": "^2.3.1",
+    "bitcoinjs-lib": "^3.1.1",
     "browserify": "^14.1.0",
     "chai": "^3.5.0",
+    "create-hash": "^1.1.2",
+    "create-hmac": "^1.1.4",
+    "crypto-browserify": "^3.11.0",
     "mocha": "^3.2.0",
+    "pbkdf2": "^3.0.9",
+    "randombytes": "^2.0.5",
     "standard": "^10.0.3",
     "tx-builder-equibit": "https://github.com/Equibit/tx-decoder.git",
     "uglify-es": "^3.1.5",
-    "wallet-message": "https://github.com/Equibit/wallet-message.git"
+    "@equibit/wallet-message": "https://github.com/Equibit/wallet-message.git"
   },
   "standard": {
     "env": [

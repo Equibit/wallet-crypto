@@ -1,6 +1,7 @@
 require('mocha')
 var assert = require('chai').assert
 var crypto = require('./index')
+var randomBytes = require('./index').randomBytes
 var eqbTxBuilder = require('tx-builder-equibit')
 var fixtureNode = require('tx-builder-equibit/test/fixtures/hdnode')
 
@@ -63,5 +64,11 @@ describe('tx-builder-equibit', function () {
 describe('wallet-message', function () {
   it('should contain `messagePow` method', function () {
     assert.equal(typeof crypto.walletMessage.messagePow, 'function')
+  })
+})
+
+describe('randomBytes', function () {
+  it('should return a random number of bytes', function () {
+    assert.equal(randomBytes(32).length, 32)
   })
 })

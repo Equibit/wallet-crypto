@@ -5,7 +5,8 @@ var createHmac = require('create-hmac')
 var createHash = require('create-hash')
 var crypto = require('crypto-browserify')
 var eqbTxBuilder = require('tx-builder-equibit')
-var walletMessage = require('wallet-message')
+var walletMessage = require('@equibit/wallet-message')
+var randomBytes = require('randombytes')
 
 module.exports = {
   bip39: bip39,
@@ -17,5 +18,6 @@ module.exports = {
   createCipher: crypto.createCipher,
   createDecipher: crypto.createDecipher,
   eqbTxBuilder: eqbTxBuilder,
-  walletMessage
+  walletMessage,
+  randomBytes
 }
