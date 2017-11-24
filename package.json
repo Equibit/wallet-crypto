@@ -41,7 +41,7 @@
     "create-hmac": "1.1.4",
     "crypto-browserify": "3.11.0",
     "mocha": "^3.2.0",
-    "pbkdf2": "^3.0.9",
+    "pbkdf2": "3.0.9",
     "randombytes": "^2.0.5",
     "standard": "^10.0.3",
     "tx-builder-equibit": "https://github.com/Equibit/tx-decoder.git",
