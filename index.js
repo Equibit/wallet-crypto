@@ -7,6 +7,7 @@ var crypto = require('crypto-browserify')
 var eqbTxBuilder = require('tx-builder-equibit')
 var walletMessage = require('@equibit/wallet-message')
 var randomBytes = require('randombytes')
+var types = require('tx-builder/src/types')
 
 module.exports = {
   bip39: bip39,
@@ -19,5 +20,6 @@ module.exports = {
   createDecipher: crypto.createDecipher,
   eqbTxBuilder: eqbTxBuilder,
   walletMessage,
-  randomBytes
+  randomBytes,
+  types
 }

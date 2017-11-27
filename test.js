@@ -72,3 +72,9 @@ describe('randomBytes', function () {
     assert.equal(randomBytes(32).length, 32)
   })
 })
+
+describe('types', function () {
+  it('should re-export types from tx-builder', function () {
+    assert.equal(typeof crypto.types.Address, 'function')
+  })
+})

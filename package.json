@@ -30,6 +30,7 @@
   "homepage": "https://github.com/Equibit/wallet-crypto#readme",
   "dependencies": {},
   "devDependencies": {
+    "@equibit/wallet-message": "https://github.com/Equibit/wallet-message.git",
     "babel-eslint": "^7.2.1",
     "babel-preset-env": "^1.6.0",
     "babelify": "^7.3.0",
@@ -44,9 +45,9 @@
     "pbkdf2": "3.0.9",
     "randombytes": "^2.0.5",
     "standard": "^10.0.3",
+    "tx-builder": "^0.12.0",
     "tx-builder-equibit": "https://github.com/Equibit/tx-decoder.git",
-    "uglify-es": "^3.1.5",
-    "@equibit/wallet-message": "https://github.com/Equibit/wallet-message.git"
+    "uglify-es": "^3.1.5"
   },
   "standard": {
     "env": [
