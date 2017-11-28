@@ -38,6 +38,6 @@ npm run build
 ```
 
 ## Release Notes:
-
+- 0.13.0 Added `safe-buffer` and re-export `Buffer`.
 - 0.7.0 Added `wallet-message` library.
 - 0.6.4 Initial version that includes bip39, bitcoinjs-lib, tx-builder-equibit and some others.
