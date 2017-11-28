@@ -61,6 +61,18 @@ describe('tx-builder-equibit', function () {
   })
 })
 
+describe('tx-builder', function () {
+  it('should re-export `txBuilder` package', function () {
+    assert.equal(typeof crypto.txBuilder, 'object')
+  })
+  it('should contain `txBuilder.decoder` object', function () {
+    assert.equal(typeof crypto.txBuilder.decoder, 'object')
+  })
+  it('should contain `txBuilder.builder` object', function () {
+    assert.equal(typeof crypto.txBuilder.builder, 'object')
+  })
+})
+
 describe('wallet-message', function () {
   it('should contain `messagePow` method', function () {
     assert.equal(typeof crypto.walletMessage.messagePow, 'function')
