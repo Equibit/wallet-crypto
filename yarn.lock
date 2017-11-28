@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@equibit/wallet-message@https://github.com/Equibit/wallet-message.git":
-  version "0.0.1"
-  resolved "https://github.com/Equibit/wallet-message.git#c89be51208c7e049e17f5259e9cce6b5f094af85"
+"@equibit/wallet-message@https://github.com/Equibit/wallet-message.git#v0.1.0":
+  version "0.1.0"
+  resolved "https://github.com/Equibit/wallet-message.git#c2416762fca70dd3dc8a52c356aba38d7214ffd9"
   dependencies:
     ramda "^0.25.0"
     safe-buffer "^5.1.1"
@@ -2659,9 +2659,9 @@ tty-browserify@~0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/tty-browserify/-/tty-browserify-0.0.0.tgz#a157ba402da24e9bf957f9aa69d524eed42901a6"
 
-"tx-builder-equibit@https://github.com/Equibit/tx-decoder.git":
-  version "0.3.0"
-  resolved "https://github.com/Equibit/tx-decoder.git#a7e7ea31047d0f5941480b74f7cc571d856e6ad7"
+"tx-builder-equibit@https://github.com/Equibit/tx-decoder.git#v0.4.0":
+  version "0.4.0"
+  resolved "https://github.com/Equibit/tx-decoder.git#797fc79b7f6368773c48510307747cb6bdb0542e"
   dependencies:
     randombytes "^2.0.5"
     safe-buffer "^5.1.1"
