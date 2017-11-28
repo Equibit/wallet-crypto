@@ -4,11 +4,12 @@ var pbkdf2 = require('pbkdf2')
 var createHmac = require('create-hmac')
 var createHash = require('create-hash')
 var crypto = require('crypto-browserify')
-var txBuilder = require('tx-builder-equibit')
+var txBuilder = require('tx-builder')
 var eqbTxBuilder = require('tx-builder-equibit')
 var walletMessage = require('@equibit/wallet-message')
 var randomBytes = require('randombytes')
 var types = require('tx-builder/src/types')
+var Buffer = require('safe-buffer').Buffer
 
 module.exports = {
   bip39: bip39,
@@ -23,5 +24,6 @@ module.exports = {
   eqbTxBuilder: eqbTxBuilder,
   walletMessage,
   randomBytes,
-  types
+  types,
+  Buffer
 }

@@ -90,3 +90,11 @@ describe('types', function () {
     assert.equal(typeof crypto.types.Address, 'function')
   })
 })
+
+describe('Buffer', function () {
+  it('should re-export Buffer from safe-buffer', function () {
+    assert.equal(typeof crypto.Buffer, 'function')
+    assert.equal(Buffer.alloc(32).length, 32)
+    assert.equal(Buffer.from('20', 'hex').toString('hex'), '20')
+  })
+})
