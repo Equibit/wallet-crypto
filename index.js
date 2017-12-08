@@ -1,5 +1,6 @@
 var bip39 = require('bip39')
 var bitcoin = require('bitcoinjs-lib')
+var scriptNumber = require('bitcoinjs-lib/src/script_number')
 var pbkdf2 = require('pbkdf2')
 var createHmac = require('create-hmac')
 var createHash = require('create-hash')
@@ -25,5 +26,6 @@ module.exports = {
   walletMessage,
   randomBytes,
   types,
-  Buffer
+  Buffer,
+  scriptNumber
 }
