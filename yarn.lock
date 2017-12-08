@@ -2659,9 +2659,9 @@ tty-browserify@~0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/tty-browserify/-/tty-browserify-0.0.0.tgz#a157ba402da24e9bf957f9aa69d524eed42901a6"
 
-"tx-builder-equibit@https://github.com/Equibit/tx-decoder.git#v0.5.0":
-  version "0.5.0"
-  resolved "https://github.com/Equibit/tx-decoder.git#761d60f111945049b1aa400709408314d11ce36e"
+"tx-builder-equibit@https://github.com/Equibit/tx-decoder.git#v0.6.0":
+  version "0.6.0"
+  resolved "https://github.com/Equibit/tx-decoder.git#799d535e369f0a6b1375794fe23d767907086028"
   dependencies:
     randombytes "^2.0.5"
     safe-buffer "^5.1.1"
