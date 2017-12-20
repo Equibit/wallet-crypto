@@ -2659,18 +2659,18 @@ tty-browserify@~0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/tty-browserify/-/tty-browserify-0.0.0.tgz#a157ba402da24e9bf957f9aa69d524eed42901a6"
 
-"tx-builder-equibit@https://github.com/Equibit/tx-decoder.git#v0.6.0":
-  version "0.6.0"
-  resolved "https://github.com/Equibit/tx-decoder.git#799d535e369f0a6b1375794fe23d767907086028"
+"tx-builder-equibit@https://github.com/Equibit/tx-decoder.git#v0.7.0":
+  version "0.7.0"
+  resolved "https://github.com/Equibit/tx-decoder.git#d505b4250665f72f90c49c0af5ce76193da7f22b"
   dependencies:
     randombytes "^2.0.5"
     safe-buffer "^5.1.1"
-    tx-builder "^0.12.0"
+    tx-builder "^0.13.1"
     typeforce "^1.11.7"
 
-tx-builder@^0.12.0:
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/tx-builder/-/tx-builder-0.12.0.tgz#0463334c02859f39142ff7594396e0ed1b32b531"
+tx-builder@^0.13.1:
+  version "0.13.1"
+  resolved "https://registry.yarnpkg.com/tx-builder/-/tx-builder-0.13.1.tgz#abefb96e3d6a4ee302ae618667463c6446653f1f"
   dependencies:
     bip39 "^2.3.1"
     bitcoinjs-lib "^3.1.1"
