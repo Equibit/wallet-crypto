@@ -47,7 +47,7 @@
     "safe-buffer": "^5.1.1",
     "standard": "^10.0.3",
     "tx-builder": "^0.13.1",
-    "tx-builder-equibit": "https://github.com/Equibit/tx-decoder.git#v0.7.0",
+    "tx-builder-equibit": "https://github.com/Equibit/tx-decoder.git#v0.8.0",
     "uglify-es": "^3.1.5"
   },
   "standard": {
