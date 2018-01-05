@@ -4,6 +4,8 @@ var crypto = require('./index')
 var randomBytes = require('./index').randomBytes
 var eqbTxBuilder = require('tx-builder-equibit')
 var fixtureNode = require('tx-builder-equibit/test/fixtures/hdnode')
+require('tx-builder-equibit/test/playground/htlc')
+var simpleHashlockSigContract = require('tx-builder-equibit/src/script-builder').simpleHashlockSigContract
 
 describe('bip39', function () {
   it('bip39.generateMnemonic', function () {
@@ -96,5 +98,15 @@ describe('Buffer', function () {
     assert.equal(typeof crypto.Buffer, 'function')
     assert.equal(Buffer.alloc(32).length, 32)
     assert.equal(Buffer.from('20', 'hex').toString('hex'), '20')
+  })
+})
+
+describe('htlc script', function () {
+  it('should run the script playground', function () {
+    var hashSecret = '88f1f9dcce43d0aea877b6be5d5ed4b90a470b151ccab39bc8d57584e6be03c7'
+    var addr = 'mzWJ35ui9iizfTiypu8Aq7oWPb6gWbRvTe'
+    var htlcScript = simpleHashlockSigContract(addr, hashSecret)
+    console.log(`htlcScript = ${htlcScript.toString('hex')}`)
+    assert.ok(htlcScript)
   })
 })
