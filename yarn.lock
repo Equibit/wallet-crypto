@@ -2660,15 +2660,21 @@ tty-browserify@~0.0.0:
   resolved "https://registry.yarnpkg.com/tty-browserify/-/tty-browserify-0.0.0.tgz#a157ba402da24e9bf957f9aa69d524eed42901a6"
 
 tx-builder-equibit@../tx-decoder-equibit:
-  version "0.8.0"
+  version "0.10.0"
   dependencies:
     randombytes "^2.0.5"
     safe-buffer "^5.1.1"
-    tx-builder "../tx-builder"
+    typeforce "^1.11.7"
+
+tx-builder-equibit@../tx-decoder-equibit/:
+  version "0.10.0"
+  dependencies:
+    randombytes "^2.0.5"
+    safe-buffer "^5.1.1"
     typeforce "^1.11.7"
 
 tx-builder@../tx-builder:
-  version "0.13.1"
+  version "0.13.2"
   dependencies:
     bip39 "^2.3.1"
     bitcoinjs-lib "^3.1.1"
