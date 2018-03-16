@@ -2666,15 +2666,8 @@ tx-builder-equibit@../tx-decoder-equibit:
     safe-buffer "^5.1.1"
     typeforce "^1.11.7"
 
-tx-builder-equibit@../tx-decoder-equibit/:
-  version "0.10.0"
-  dependencies:
-    randombytes "^2.0.5"
-    safe-buffer "^5.1.1"
-    typeforce "^1.11.7"
-
 tx-builder@../tx-builder:
-  version "0.13.2"
+  version "0.13.3"
   dependencies:
     bip39 "^2.3.1"
     bitcoinjs-lib "^3.1.1"
