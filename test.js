@@ -4,7 +4,7 @@ var crypto = require('./index')
 var randomBytes = require('./index').randomBytes
 var eqbTxBuilder = require('tx-builder-equibit')
 var fixtureNode = require('tx-builder-equibit/test/fixtures/hdnode')
-// require('tx-builder-equibit/test/playground/htlc')
+require('tx-builder-equibit/test/playground/htlc')
 var simpleHashlockSigContract = require('tx-builder-equibit/src/script-builder').simpleHashlockSigContract
 
 describe('bip39', function () {

@@ -2,13 +2,13 @@
 # yarn lockfile v1
 
 
-"@equibit/wallet-message@https://github.com/Equibit/wallet-message.git#v0.1.0":
-  version "0.1.0"
-  resolved "https://github.com/Equibit/wallet-message.git#c2416762fca70dd3dc8a52c356aba38d7214ffd9"
+"@equibit/wallet-message@https://github.com/Equibit/wallet-message.git#v0.2.0":
+  version "0.2.0"
+  resolved "https://github.com/Equibit/wallet-message.git#c0f3ebaf2d8344533b54bd3777d0218483eb6730"
   dependencies:
     ramda "^0.25.0"
     safe-buffer "^5.1.1"
-    tx-builder "^0.8.0"
+    tx-builder "^0.15.0"
     typeforce "^1.11.1"
     varuint-bitcoin "^1.0.4"
     worker-task-runner "0.0.2"
@@ -2663,15 +2663,15 @@ tty-browserify@~0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/tty-browserify/-/tty-browserify-0.0.0.tgz#a157ba402da24e9bf957f9aa69d524eed42901a6"
 
-"tx-builder-equibit@https://github.com/Equibit/tx-decoder.git#v0.12.0":
-  version "0.12.0"
-  resolved "https://github.com/Equibit/tx-decoder.git#0343a51965f1d13d2ffb966e1b1146a751feef9c"
+"tx-builder-equibit@https://github.com/Equibit/tx-decoder.git#v0.13.0":
+  version "0.13.0"
+  resolved "https://github.com/Equibit/tx-decoder.git#db0d496574b892e1070e683171cee7588d604a70"
   dependencies:
     randombytes "^2.0.5"
     safe-buffer "^5.1.1"
     typeforce "^1.11.7"
 
-tx-builder@0.15.0:
+tx-builder@0.15.0, tx-builder@^0.15.0:
   version "0.15.0"
   resolved "https://registry.yarnpkg.com/tx-builder/-/tx-builder-0.15.0.tgz#cd38f78585171a6756ea2ca6da2976d31f153f5b"
   dependencies:
@@ -2682,18 +2682,6 @@ tx-builder@0.15.0:
     ramda "^0.24.1"
     safe-buffer "^5.1.1"
     typeforce "^1.11.1"
-    varuint-bitcoin "^1.0.4"
-
-tx-builder@^0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/tx-builder/-/tx-builder-0.8.0.tgz#196eaf9127ac9afbb50b8a002b20fe3db15ad8e9"
-  dependencies:
-    bip39 "^2.3.1"
-    bitcoinjs-lib "^3.1.1"
-    ramda "^0.24.1"
-    safe-buffer "^5.1.1"
-    typeforce "^1.11.1"
-    uglify-es "^3.1.0"
     varuint-bitcoin "^1.0.4"
 
 type-check@~0.3.2:
@@ -2718,7 +2706,7 @@ typeforce@^1.11.1, typeforce@^1.11.3, typeforce@^1.11.7:
   version "1.12.0"
   resolved "https://registry.yarnpkg.com/typeforce/-/typeforce-1.12.0.tgz#ca40899919f1466d7819e37be039406beb912a2e"
 
-uglify-es@^3.1.0, uglify-es@^3.1.5:
+uglify-es@^3.1.5:
   version "3.1.10"
   resolved "https://registry.yarnpkg.com/uglify-es/-/uglify-es-3.1.10.tgz#f1840c3b52771d17555a02ce158cf46f689384bd"
   dependencies:
