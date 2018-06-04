@@ -1774,6 +1774,10 @@ isarray@~0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-0.0.1.tgz#8a18acfca9a8f4177e09abfc6038939b05d1eedf"
 
+js-sha3@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/js-sha3/-/js-sha3-0.7.0.tgz#0a5c57b36f79882573b2d84051f8bb85dd1bd63a"
+
 js-tokens@^3.0.0, js-tokens@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
@@ -2659,19 +2663,22 @@ tty-browserify@~0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/tty-browserify/-/tty-browserify-0.0.0.tgz#a157ba402da24e9bf957f9aa69d524eed42901a6"
 
-tx-builder-equibit@../tx-decoder-equibit:
-  version "0.10.0"
+"tx-builder-equibit@https://github.com/Equibit/tx-decoder.git#v0.12.0":
+  version "0.12.0"
+  resolved "https://github.com/Equibit/tx-decoder.git#0343a51965f1d13d2ffb966e1b1146a751feef9c"
   dependencies:
     randombytes "^2.0.5"
     safe-buffer "^5.1.1"
     typeforce "^1.11.7"
 
-tx-builder@../tx-builder:
-  version "0.13.3"
+tx-builder@0.15.0:
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/tx-builder/-/tx-builder-0.15.0.tgz#cd38f78585171a6756ea2ca6da2976d31f153f5b"
   dependencies:
     bip39 "^2.3.1"
     bitcoinjs-lib "^3.1.1"
     bs58check "^2.1.0"
+    js-sha3 "^0.7.0"
     ramda "^0.24.1"
     safe-buffer "^5.1.1"
     typeforce "^1.11.1"

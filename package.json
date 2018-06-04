@@ -46,8 +46,8 @@
     "randombytes": "^2.0.5",
     "safe-buffer": "^5.1.1",
     "standard": "^10.0.3",
-    "tx-builder": "../tx-builder",
-    "tx-builder-equibit": "../tx-decoder-equibit",
+    "tx-builder": "0.15.0",
+    "tx-builder-equibit": "https://github.com/Equibit/tx-decoder.git#v0.12.0",
     "uglify-es": "^3.1.5"
   },
   "standard": {

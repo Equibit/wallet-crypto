@@ -4,7 +4,7 @@ var crypto = require('./index')
 var randomBytes = require('./index').randomBytes
 var eqbTxBuilder = require('tx-builder-equibit')
 var fixtureNode = require('tx-builder-equibit/test/fixtures/hdnode')
-require('tx-builder-equibit/test/playground/htlc')
+// require('tx-builder-equibit/test/playground/htlc')
 var simpleHashlockSigContract = require('tx-builder-equibit/src/script-builder').simpleHashlockSigContract
 
 describe('bip39', function () {
@@ -53,13 +53,16 @@ describe('tx-builder-equibit', function () {
     }]
   }
   var txid = 'f7d06259b369168013b2f00f2b3eadfd5abfab971555fc920d435395dd1a0056'
-  tx.vin[0].keyPair = fixtureNode.keyPair
-  var buffer = eqbTxBuilder.builder.buildTx(tx)
+  var buffer
+  before(function () {
+    tx.vin[0].keyPair = fixtureNode.keyPair
+    buffer = eqbTxBuilder.builder.buildTx(tx, {})
+  })
   it('tx-builder-equibit.builder.buildTx', function () {
     assert.ok(buffer.toString('hex'), 'should build a transaction')
   })
   it('tx-builder-equibit.getTxId', function () {
-    assert.equal(eqbTxBuilder.getTxId(buffer), txid, 'should get txid')
+    assert.equal(eqbTxBuilder.getTxId({})(buffer), txid, 'should get txid')
   })
 })
 
