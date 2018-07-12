@@ -11,6 +11,5 @@ publish:
 	git push -f origin release
 	npm publish --access public
 	git checkout -
-	git branch -D release
 	git push
 	git push --tags
