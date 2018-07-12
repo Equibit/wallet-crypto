@@ -11,6 +11,7 @@ var walletMessage = require('@equibit/wallet-message')
 var randomBytes = require('randombytes')
 var types = require('tx-builder/src/types')
 var Buffer = require('safe-buffer').Buffer
+var sha3 = require('js-sha3')
 
 module.exports = {
   bip39: bip39,
@@ -27,5 +28,6 @@ module.exports = {
   randomBytes,
   types,
   Buffer,
-  scriptNumber
+  scriptNumber,
+  sha3
 }

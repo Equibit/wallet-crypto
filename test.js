@@ -104,6 +104,16 @@ describe('Buffer', function () {
   })
 })
 
+describe('sha3', function () {
+  it('should re-export sha3 from js-sha3', function () {
+    assert.equal(typeof crypto.sha3.sha3_512, 'function')
+    assert.equal(typeof crypto.sha3.sha3_256, 'function')
+  })
+  it('should create sha3_512 hash', function () {
+    assert.equal(crypto.sha3.sha3_512('The quick brown fox jumps over the lazy dog'), '01dedd5de4ef14642445ba5f5b97c15e47b9ad931326e4b0727cd94cefc44fff23f07bf543139939b49128caf436dc1bdee54fcb24023a08d9403f9b4bf0d450')
+  })
+})
+
 describe('htlc script', function () {
   it('should run the script playground', function () {
     var hashSecret = '88f1f9dcce43d0aea877b6be5d5ed4b90a470b151ccab39bc8d57584e6be03c7'
