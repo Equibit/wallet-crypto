@@ -35,7 +35,7 @@
     "babel-preset-env": "^1.6.0",
     "babelify": "^7.3.0",
     "bip39": "^2.3.1",
-    "bitcoinjs-lib": "^3.3.1",
+    "bitcoinjs-lib": "^4.0.1",
     "browserify": "^14.1.0",
     "chai": "^3.5.0",
     "create-hash": "^1.1.3",
@@ -47,8 +47,8 @@
     "randombytes": "^2.0.5",
     "safe-buffer": "^5.1.1",
     "standard": "^10.0.3",
-    "tx-builder": "0.15.0",
-    "tx-builder-equibit": "https://github.com/Equibit/tx-decoder.git#v0.13.0",
+    "tx-builder": "0.16.0",
+    "tx-builder-equibit": "https://github.com/Equibit/tx-builder-equibit.git#v0.16.0",
     "uglify-es": "^3.1.5"
   },
   "standard": {
