@@ -1,11 +1,11 @@
 require('mocha')
-var assert = require('chai').assert
-var crypto = require('./index')
-var randomBytes = require('./index').randomBytes
-var eqbTxBuilder = require('tx-builder-equibit')
-var fixtureNode = require('tx-builder-equibit/test/fixtures/hdnode')
+const assert = require('chai').assert
+const crypto = require('./index')
+const randomBytes = require('./index').randomBytes
+const eqbTxBuilder = require('tx-builder-equibit')
+const fixtureNode = require('tx-builder-equibit/test/fixtures/hdnode')
 require('tx-builder-equibit/test/playground/htlc')
-var simpleHashlockSigContract = require('tx-builder-equibit/src/script-builder').simpleHashlockSigContract
+const simpleHashlockSigContract = require('tx-builder-equibit/src/script-builder').simpleHashlockSigContract
 
 describe('bip39', function () {
   it('bip39.generateMnemonic', function () {
@@ -14,16 +14,26 @@ describe('bip39', function () {
 })
 
 describe('bitcoinjs-lib', function () {
-  it('bitcoinjs-lib.HDNode', function () {
-    var mnemonic = crypto.bip39.generateMnemonic()
-    var seed = crypto.bip39.mnemonicToSeed(mnemonic, '')
-    var pk = crypto.bitcoin.HDNode.fromSeedBuffer(seed, crypto.bitcoin.networks.bitcoin)
-    assert.ok(pk.keyPair.compressed, 'should generate a private key')
+  it('should have bitcoinjs-lib.ECPair', function () {
+    assert.equal(typeof crypto.bitcoin.ECPair, 'object')
+    assert.equal(typeof crypto.bitcoin.ECPair.fromPrivateKey, 'function')
+  })
+  it('should not have bitcoinjs-lib.HDNode', function () {
+    assert.equal(typeof crypto.bitcoin.HDNode, 'undefined')
+  })
+})
+describe('bip-32', function () {
+  it('should derive keys from seed', function () {
+    const mnemonic = crypto.bip39.generateMnemonic()
+    const seed = crypto.bip39.mnemonicToSeed(mnemonic, '')
+    const root = crypto.bip32.fromSeed(seed, crypto.bitcoin.networks.testnet)
+    const hdNode = root.derivePath(`m/44'/0'/0'`)
+    assert.ok(hdNode)
   })
 })
 
 describe('tx-builder-equibit', function () {
-  var tx = {
+  const tx = {
     version: 1,
     locktime: 104,
     vin: [{
@@ -52,8 +62,8 @@ describe('tx-builder-equibit', function () {
       }
     }]
   }
-  var txid = 'f7d06259b369168013b2f00f2b3eadfd5abfab971555fc920d435395dd1a0056'
-  var buffer
+  const txid = 'f7d06259b369168013b2f00f2b3eadfd5abfab971555fc920d435395dd1a0056'
+  let buffer
   before(function () {
     tx.vin[0].keyPair = fixtureNode.keyPair
     buffer = eqbTxBuilder.builder.buildTx(tx, {})
@@ -116,9 +126,9 @@ describe('sha3', function () {
 
 describe('htlc script', function () {
   it('should run the script playground', function () {
-    var hashSecret = '88f1f9dcce43d0aea877b6be5d5ed4b90a470b151ccab39bc8d57584e6be03c7'
-    var addr = 'mzWJ35ui9iizfTiypu8Aq7oWPb6gWbRvTe'
-    var htlcScript = simpleHashlockSigContract(addr, hashSecret)
+    const hashSecret = '88f1f9dcce43d0aea877b6be5d5ed4b90a470b151ccab39bc8d57584e6be03c7'
+    const addr = 'mzWJ35ui9iizfTiypu8Aq7oWPb6gWbRvTe'
+    const htlcScript = simpleHashlockSigContract(addr, hashSecret)
     console.log(`htlcScript = ${htlcScript.toString('hex')}`)
     assert.ok(htlcScript)
   })

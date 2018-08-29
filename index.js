@@ -1,3 +1,4 @@
+var bip32 = require('bip32')
 var bip39 = require('bip39')
 var bitcoin = require('bitcoinjs-lib')
 var scriptNumber = require('bitcoinjs-lib/src/script_number')
@@ -14,6 +15,7 @@ var Buffer = require('safe-buffer').Buffer
 var sha3 = require('js-sha3')
 
 module.exports = {
+  bip32: bip32,
   bip39: bip39,
   bitcoin: bitcoin,
   pbkdf2: pbkdf2.pbkdf2,
