@@ -30,7 +30,7 @@
   "homepage": "https://github.com/Equibit/wallet-crypto#readme",
   "dependencies": {},
   "devDependencies": {
-    "@equibit/wallet-message": "https://github.com/Equibit/wallet-message.git#v0.2.0",
+    "@equibit/wallet-message": "https://github.com/Equibit/wallet-message.git#v0.3.0",
     "babel-eslint": "^7.2.1",
     "babel-preset-env": "^1.6.0",
     "babelify": "^7.3.0",
