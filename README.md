@@ -38,6 +38,7 @@ npm run build
 ```
 
 ## Release Notes:
+- 0.31.0 Updated to use v0.17.0 of tx-builder-equibit
 - 0.17.0 Experiment package with a simplified hashlock script.
 - 0.13.0 Added `safe-buffer` and re-export `Buffer`.
 - 0.7.0 Added `wallet-message` library.
