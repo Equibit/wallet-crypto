@@ -44,25 +44,25 @@ describe('tx-builder-equibit', function () {
     }],
     vout: [{
       value: 1 * 100000000,
-      address: 'mxk5zYRwVWDAwgKYaAadDeiCjY67ACAHLt',
-      equibit: {
-        payment_currency: 0,
-        payment_tx_id: '',
-        issuance_tx_id: '0000000000000000000000000000000000000000000000000000000000000000',
-        issuance_json: ''
-      }
+      address: 'mxk5zYRwVWDAwgKYaAadDeiCjY67ACAHLt'
+      // equibit: {
+      //   payment_currency: 0,
+      //   payment_tx_id: '',
+      //   issuance_tx_id: '0000000000000000000000000000000000000000000000000000000000000000',
+      //   issuance_json: ''
+      // }
     }, {
       value: (25 - 1 - 0.0001) * 100000000,
-      address: 'mm2zdwmiVBR7ipNiN3tr4CCu6sS5tFwKna',
-      equibit: {
-        payment_currency: 0,
-        payment_tx_id: '',
-        issuance_tx_id: '0000000000000000000000000000000000000000000000000000000000000000',
-        issuance_json: ''
-      }
+      address: 'mm2zdwmiVBR7ipNiN3tr4CCu6sS5tFwKna'
+      // equibit: {
+      //   payment_currency: 0,
+      //   payment_tx_id: '',
+      //   issuance_tx_id: '0000000000000000000000000000000000000000000000000000000000000000',
+      //   issuance_json: ''
+      // }
     }]
   }
-  const txid = 'f7d06259b369168013b2f00f2b3eadfd5abfab971555fc920d435395dd1a0056'
+  const txid = 'a287b362e02471f7921df7e1e72dfb07bd5a102900d99b977112027746bdd94c'
   let buffer
   before(function () {
     tx.vin[0].keyPair = fixtureNode.keyPair

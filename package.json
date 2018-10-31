@@ -1,6 +1,6 @@
 {
   "name": "@equibit/wallet-crypto",
-  "version": "0.30.0",
+  "version": "0.31.0",
   "description": "Equibit crypto utils",
   "main": "dist/wallet-crypto.min.js",
   "scripts": {
@@ -49,7 +49,7 @@
     "safe-buffer": "^5.1.1",
     "standard": "^10.0.3",
     "tx-builder": "0.16.0",
-    "tx-builder-equibit": "https://github.com/Equibit/tx-builder-equibit.git#v0.16.0",
+    "tx-builder-equibit": "https://github.com/Equibit/tx-builder-equibit.git#v0.17.0",
     "uglify-es": "^3.1.5"
   },
   "standard": {
